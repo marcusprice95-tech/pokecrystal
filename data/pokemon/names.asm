@@ -162,7 +162,7 @@ PokemonNames::
 	dname "FERALIGATR"
 	dname "SENTRET"
 	dname "FURRET"
-	dname "HOOTHOOT"
+	dname "SNOM"
 	dname "NOCTOWL"
 	dname "LEDYBA"
 	dname "LEDIAN"
