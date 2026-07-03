@@ -19,6 +19,7 @@
 
 ## Move System
 
+- Design authority: See `MOVE_BIBLE.md`
 - Max move ID: Vanilla `NUM_ATTACKS`
 - Reserved move IDs: Vanilla unused move/animation IDs only; final policy TBD
 - Move data fields: animation, effect, power, category-coded type, accuracy, PP, effect chance
