@@ -12,6 +12,18 @@
 *.dimensions
 *.animated.tilemap
 *.sgb.tilemap
+# duplicate generated graphics occasionally created by Finder/cloud copy suffixes
+* 2.1bpp
+* 2.2bpp
+* 2.lz
+* 2.gbcpal
+* 2.dimensions
+* 2.animated.tilemap
+* 2.sgb.tilemap
+* 2.o
+gfx/pokemon/*/front.animated 2.tilemap
+gfx/pokemon/*/bitmask 2.asm
+gfx/pokemon/*/frames 2.asm
 gfx/pokemon/*/bitmask.asm
 gfx/pokemon/*/frames.asm
 !gfx/pokemon/unown/bitmask.asm
