@@ -30,6 +30,7 @@ DEF UNUSED_TYPES_END EQU const_value
 	const ICE
 	const DRAGON
 	const DARK
+	const FAIRY
 DEF TYPES_END EQU const_value
 
 ; Move categories are stored in the high bits of MOVE_TYPE.

@@ -12,8 +12,8 @@
 ## Battle Mechanics
 
 - Physical/Special split: Implemented; move category is stored in the high bits of `MOVE_TYPE`
-- Fairy type: Not implemented
-- Type chart: Vanilla Pokemon Crystal
+- Fairy type: Implemented as raw type ID after `DARK`; remains below `TYPE_MASK`
+- Type chart: Modern type chart, including Fairy and modern Steel neutrality to Ghost/Dark
 - Battle bug fixes applied: None in this branch yet
 - Known battle limitations: Vanilla battle mechanics and known Crystal bugs still apply unless documented otherwise.
 
@@ -23,6 +23,7 @@
 - Reserved move IDs: Vanilla unused move/animation IDs only; final policy TBD
 - Move data fields: animation, effect, power, category-coded type, accuracy, PP, effect chance
 - Move category storage: `MOVE_TYPE = category bits | raw type id`; use `TYPE_MASK` before raw type lookups
+- Existing Fairy-type move retcons: `SWEET_KISS`, `CHARM`, `MOONLIGHT`
 - Animation policy: Reuse existing animations unless a new move requires a documented custom animation.
 - New move effect policy: TBD
 
@@ -31,6 +32,7 @@
 - Max species: Vanilla one-byte species ID range
 - Species ID policy: Keep 251-species compatibility for engine v1.0; custom Pokemon should replace existing species unless a later plan explicitly expands species IDs.
 - Base data structure: Vanilla pokecrystal base data structure
+- Vanilla species Fairy retcons: Not applied yet; no existing species base types have been changed to Fairy in this branch
 - TM/HM compatibility capacity: `NUM_TM_HM_TUTOR` packed flag array in base data
 - Custom Pokemon constraints: TBD after engine feature freeze
 
@@ -51,6 +53,7 @@
 - SRAM/WRAM changes: None in this branch yet
 - Migration policy: TBD
 - Breaking changes: None known in this branch yet
+- Time Capsule/link compatibility: Out of scope for Crystal Modern engine features; no compatibility work was added for Fairy type.
 
 ## Testing Matrix
 
