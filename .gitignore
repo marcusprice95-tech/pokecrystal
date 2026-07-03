@@ -1,6 +1,9 @@
 # compiled objects
 *.o
 
+# macOS metadata
+.DS_Store
+
 # compiled graphics
 *.1bpp
 *.2bpp
