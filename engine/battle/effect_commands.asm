@@ -1243,6 +1243,9 @@ BattleCommand_Stab:
 .go
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
+	; MOVE_TYPE stores category bits with the raw type id.
+	; STAB, weather, and badge boosts all need only the raw type.
+	and TYPE_MASK
 	ld [wCurType], a
 
 	push hl
@@ -1290,6 +1293,8 @@ BattleCommand_Stab:
 .SkipStab:
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	; TypeMatchups is indexed by raw type ids, not category-coded move types.
+	and TYPE_MASK
 	ld b, a
 	ld hl, TypeMatchups
 
@@ -1409,6 +1414,8 @@ CheckTypeMatchup:
 	push bc
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	; TypeMatchups is indexed by raw type ids, not category-coded move types.
+	and TYPE_MASK
 	ld d, a
 	ld b, [hl]
 	inc hl
@@ -2541,6 +2548,8 @@ PlayerAttackDamage:
 	ret z
 
 	ld a, [hl]
+	; MOVE_TYPE includes category bits. Damage stats intentionally compare
+	; the category-coded value against SPECIAL here.
 	cp SPECIAL
 	jr nc, .special
 
@@ -2673,6 +2682,8 @@ CheckDamageStatsCritical:
 	and a
 	jr nz, .enemy
 	ld a, [wPlayerMoveStructType]
+	; Keep category bits here: critical-hit stat handling depends on
+	; whether this move is physical or special.
 	cp SPECIAL
 ; special
 	ld a, [wPlayerSAtkLevel]
@@ -2687,6 +2698,8 @@ CheckDamageStatsCritical:
 
 .enemy
 	ld a, [wEnemyMoveStructType]
+	; Keep category bits here: critical-hit stat handling depends on
+	; whether this move is physical or special.
 	cp SPECIAL
 ; special
 	ld a, [wEnemySAtkLevel]
@@ -2785,6 +2798,8 @@ EnemyAttackDamage:
 	ret z
 
 	ld a, [hl]
+	; MOVE_TYPE includes category bits. Damage stats intentionally compare
+	; the category-coded value against SPECIAL here.
 	cp SPECIAL
 	jr nc, .special
 
@@ -3003,6 +3018,8 @@ BattleCommand_DamageCalc:
 	ld b, a
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	; Type-boosting held items compare against raw type ids.
+	and TYPE_MASK
 	cp b
 	jr nz, .DoneItem
 
@@ -5922,6 +5939,8 @@ CheckMoveTypeMatchesTarget:
 
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	; Target type checks compare raw type ids.
+	and TYPE_MASK
 	cp NORMAL
 	jr z, .normal
 

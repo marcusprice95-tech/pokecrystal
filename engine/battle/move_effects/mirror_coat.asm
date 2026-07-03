@@ -32,6 +32,7 @@ BattleCommand_MirrorCoat:
 	ret z
 
 	ld a, [wStringBuffer1 + MOVE_TYPE]
+	; Mirror Coat only responds to special damaging moves.
 	cp SPECIAL
 	ret c
 

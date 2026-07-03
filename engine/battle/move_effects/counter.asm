@@ -31,6 +31,7 @@ BattleCommand_Counter:
 	ret z
 
 	ld a, [wStringBuffer1 + MOVE_TYPE]
+	; Counter only responds to physical damaging moves.
 	cp SPECIAL
 	ret nc
 

@@ -23,6 +23,8 @@ BattleCommand_Conversion:
 	dec a
 	ld hl, Moves + MOVE_TYPE
 	call GetMoveAttr
+	; MOVE_TYPE includes category bits; Conversion changes to a raw type.
+	and TYPE_MASK
 	ld [de], a
 	inc de
 	pop bc

@@ -16,6 +16,8 @@ BattleCommand_Conversion2:
 	dec a
 	ld hl, Moves + MOVE_TYPE
 	call GetMoveAttr
+	; MOVE_TYPE includes category bits; Conversion2 compares raw types.
+	and TYPE_MASK
 	ld d, a
 	pop hl
 	cp CURSE_TYPE
@@ -38,6 +40,8 @@ BattleCommand_Conversion2:
 	push hl
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
+	; Save only the raw type. Category bits would corrupt TypeMatchups.
+	and TYPE_MASK
 	push af
 	push hl
 	ld a, d

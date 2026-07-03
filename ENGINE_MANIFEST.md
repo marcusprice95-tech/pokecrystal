@@ -11,7 +11,7 @@
 
 ## Battle Mechanics
 
-- Physical/Special split: Not implemented
+- Physical/Special split: Implemented; move category is stored in the high bits of `MOVE_TYPE`
 - Fairy type: Not implemented
 - Type chart: Vanilla Pokemon Crystal
 - Battle bug fixes applied: None in this branch yet
@@ -21,8 +21,8 @@
 
 - Max move ID: Vanilla `NUM_ATTACKS`
 - Reserved move IDs: Vanilla unused move/animation IDs only; final policy TBD
-- Move data fields: Vanilla move table fields: animation, effect, power, type, accuracy, PP, effect chance
-- Move category storage: Not implemented
+- Move data fields: animation, effect, power, category-coded type, accuracy, PP, effect chance
+- Move category storage: `MOVE_TYPE = category bits | raw type id`; use `TYPE_MASK` before raw type lookups
 - Animation policy: Reuse existing animations unless a new move requires a documented custom animation.
 - New move effect policy: TBD
 
