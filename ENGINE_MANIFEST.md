@@ -59,8 +59,8 @@
 
 ## Quality Of Life Features
 
-- Implemented: None in this branch yet
-- Deferred: reusable TMs, TM/HM move names, Repel reuse, Running Shoes, move reminder/relearner
+- Implemented: reusable TMs
+- Deferred: TM/HM move names, Repel reuse, Running Shoes, move reminder/relearner
 
 ## Save Compatibility
 
