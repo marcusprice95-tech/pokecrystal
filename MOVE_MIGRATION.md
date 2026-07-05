@@ -24,11 +24,27 @@ is obsolete, low-impact, or unsuitable for Crystal Modern's battle design.
 | `KINESIS` | `$86` | `MOONBLAST` | Fairy | Special | Obscure accuracy-drop move with very small distribution. The slot is suitable for the primary late-game special Fairy attack. | Appeared in two vanilla level-up entries and one trainer moveset. Abra/Kadabra/Alakazam references now use `FLASH` to preserve an accuracy-lowering role without granting accidental Fairy coverage. | Implemented |
 | `PSYWAVE` | `$95` | `DRAINING_KISS` | Fairy | Special | Confusing variable-damage move with poor player clarity. Replacing it creates a simple Fairy sustain option using existing 50 percent drain behavior. | Appeared in one vanilla level-up entry and two egg move entries. Those references now use `CONFUSE_RAY` or `PSYBEAM` to avoid accidental Fairy coverage. | Implemented |
 
+## Batch B: Core Coverage
+
+| Original move | Original move ID | Replacement move | New type | New category | Reason for replacement | Distribution impact | Status |
+| --- | ---: | --- | --- | --- | --- | --- | --- |
+| `COMET_PUNCH` | `$04` | `SHADOW_CLAW` | Ghost | Physical | Low-power Normal multi-hit move with limited unique value. The slot adds a clear physical Ghost option while keeping `SHADOW_BALL` available. | Vanilla level-up and trainer references now use `MACH_PUNCH` or `MEGA_PUNCH` to avoid accidental Ghost coverage. | Implemented |
+| `SMOG` | `$7b` | `POISON_JAB` | Poison | Physical | Weak, inaccurate Poison move whose role is covered by `POISON_GAS`, `SLUDGE`, and `SMOKESCREEN`. The slot adds needed physical Poison STAB. | Vanilla level-up and trainer references now use `POISON_GAS`, `SMOKESCREEN`, `EMBER`, `ROAR`, or `SLUDGE` depending on species role. | Implemented |
+| `TWINEEDLE` | `$29` | `X_SCISSOR` | Bug | Physical | Beedrill-only legacy move with awkward low power. The slot adds a reliable physical Bug staple. | Vanilla Beedrill level-up and trainer references now use `PIN_MISSILE` to preserve Bug flavor without granting `X_SCISSOR` by accident. | Implemented |
+| `SPIKE_CANNON` | `$83` | `FLASH_CANNON` | Steel | Special | Redundant Normal multi-hit move with sparse distribution. The slot adds a simple special Steel attack. | Vanilla Cloyster/Corsola/Omastar references now use `AURORA_BEAM`, `BUBBLEBEAM`, or `ANCIENTPOWER`. | Implemented |
+| `CLAMP` | `$80` | `POWER_GEM` | Rock | Special | Inaccurate trapping move with narrow distribution and inherited trap text/AI hooks. The slot adds needed special Rock coverage. | Vanilla Shellder reference now uses `WHIRLPOOL`; Rain Dance AI and trap text references were removed so `POWER_GEM` does not inherit Clamp behavior. | Implemented |
+| `RAZOR_WIND` | `$0d` | `AIR_SLASH` | Flying | Special | Two-turn Normal attack with poor clarity and low practical value. The slot adds a special Flying attack with a simple flinch effect. | Vanilla egg move references now use `GROWTH`, `WING_ATTACK`, or `SLASH`; charge-turn/high-crit metadata was removed from the old slot. | Implemented |
+| `PRESENT` | `$d9` | `SEED_BOMB` | Grass | Physical | Confusing variable-damage/healing move with poor player clarity. The slot adds a clean physical Grass attack. | Vanilla level-up, egg, and trainer references now use nearby Normal/status/flavor moves such as `PECK`, `SWIFT`, `DIZZY_PUNCH`, `HEADBUTT`, or `DEFENSE_CURL`. | Implemented |
+
 ## Notes
 
 - Phase A should not expand `NUM_ATTACKS`.
 - Phase A should not add new TMs.
 - Phase A should not change Hidden Power.
 - Phase A should use existing move effects where practical.
+- Batch B should not expand `NUM_ATTACKS`.
+- Batch B should not add new TMs.
+- Batch B should not intentionally distribute its new coverage to vanilla
+  Pokemon; custom distribution belongs to the custom Pokedex pass.
 - Old save files containing a replaced move ID will display and behave as the new
   move. This is expected for ID reuse and must be documented per milestone.

@@ -14,7 +14,7 @@ BulbasaurEggMoves:
 	db LIGHT_SCREEN
 	db SKULL_BASH
 	db SAFEGUARD
-	db RAZOR_WIND
+	db GROWTH
 	db PETAL_DANCE
 	db -1 ; end
 
@@ -341,7 +341,7 @@ RhyhornEggMoves:
 	db -1 ; end
 
 ChanseyEggMoves:
-	db PRESENT
+	db DEFENSE_CURL
 	db METRONOME
 	db HEAL_BELL
 	db -1 ; end
@@ -387,7 +387,7 @@ ScytherEggMoves:
 	db COUNTER
 	db SAFEGUARD
 	db BATON_PASS
-	db RAZOR_WIND
+	db WING_ATTACK
 	db REVERSAL
 	db LIGHT_SCREEN
 	db -1 ; end
@@ -463,7 +463,7 @@ TotodileEggMoves:
 	db THRASH
 	db HYDRO_PUMP
 	db ANCIENTPOWER
-	db RAZOR_WIND
+	db SLASH
 	db ROCK_SLIDE
 	db -1 ; end
 
@@ -507,13 +507,13 @@ ChinchouEggMoves:
 PichuEggMoves:
 	db REVERSAL
 	db BIDE
-	db PRESENT
+	db SWIFT
 	db ENCORE
 	db DOUBLESLAP
 	db -1 ; end
 
 CleffaEggMoves:
-	db PRESENT
+	db DIZZY_PUNCH
 	db METRONOME
 	db AMNESIA
 	db BELLY_DRUM
@@ -523,12 +523,12 @@ CleffaEggMoves:
 
 IgglybuffEggMoves:
 	db PERISH_SONG
-	db PRESENT
+	db DIZZY_PUNCH
 	db FAINT_ATTACK
 	db -1 ; end
 
 TogepiEggMoves:
-	db PRESENT
+	db SWIFT
 	db MIRROR_MOVE
 	db PECK
 	db FORESIGHT
@@ -554,7 +554,7 @@ MareepEggMoves:
 
 MarillEggMoves:
 	db LIGHT_SCREEN
-	db PRESENT
+	db DEFENSE_CURL
 	db AMNESIA
 	db FUTURE_SIGHT
 	db BELLY_DRUM
@@ -640,7 +640,7 @@ DunsparceEggMoves:
 GligarEggMoves:
 	db METAL_CLAW
 	db WING_ATTACK
-	db RAZOR_WIND
+	db SLASH
 	db COUNTER
 	db -1 ; end
 
@@ -648,7 +648,7 @@ SnubbullEggMoves:
 	db METRONOME
 	db FAINT_ATTACK
 	db REFLECT
-	db PRESENT
+	db HEADBUTT
 	db CRUNCH
 	db HEAL_BELL
 	db LICK
@@ -792,7 +792,7 @@ MagbyEggMoves:
 	db -1 ; end
 
 MiltankEggMoves:
-	db PRESENT
+	db DIZZY_PUNCH
 	db REVERSAL
 	db SEISMIC_TOSS
 	db -1 ; end

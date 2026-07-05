@@ -13,7 +13,7 @@ MoveGrammar:
 	db WITHDRAW
 	db DEFENSE_CURL
 	db EGG_BOMB
-	db SMOG
+	db POISON_JAB
 	db BONE_CLUB
 	db FLASH
 	db SPLASH
@@ -80,7 +80,7 @@ MoveGrammar:
 	db SCREECH
 	db METRONOME
 	db LICK
-	db CLAMP
+	db POWER_GEM
 	db CONSTRICT
 	db POISON_GAS
 	db BUBBLE

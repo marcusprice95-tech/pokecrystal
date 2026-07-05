@@ -4,7 +4,7 @@ MoveDescriptions::
 	dw PoundDescription
 	dw KarateChopDescription
 	dw DoubleslapDescription
-	dw CometPunchDescription
+	dw ShadowClawDescription
 	dw MegaPunchDescription
 	dw PayDayDescription
 	dw FirePunchDescription
@@ -13,7 +13,7 @@ MoveDescriptions::
 	dw ScratchDescription
 	dw VicegripDescription
 	dw GuillotineDescription
-	dw RazorWindDescription
+	dw AirSlashDescription
 	dw SwordsDanceDescription
 	dw CutDescription
 	dw GustDescription
@@ -41,7 +41,7 @@ MoveDescriptions::
 	dw DoubleEdgeDescription
 	dw TailWhipDescription
 	dw PoisonStingDescription
-	dw TwineedleDescription
+	dw XScissorDescription
 	dw PinMissileDescription
 	dw LeerDescription
 	dw BiteDescription
@@ -123,15 +123,15 @@ MoveDescriptions::
 	dw SelfdestructDescription
 	dw EggBombDescription
 	dw LickDescription
-	dw SmogDescription
+	dw PoisonJabDescription
 	dw SludgeDescription
 	dw BoneClubDescription
 	dw FireBlastDescription
 	dw WaterfallDescription
-	dw ClampDescription
+	dw PowerGemDescription
 	dw SwiftDescription
 	dw SkullBashDescription
-	dw SpikeCannonDescription
+	dw FlashCannonDescription
 	dw ConstrictDescription
 	dw AmnesiaDescription
 	dw MoonblastDescription
@@ -217,7 +217,7 @@ MoveDescriptions::
 	dw SleepTalkDescription
 	dw HealBellDescription
 	dw ReturnDescription
-	dw PresentDescription
+	dw SeedBombDescription
 	dw FrustrationDescription
 	dw SafeguardDescription
 	dw PainSplitDescription
@@ -279,9 +279,9 @@ DoubleslapDescription:
 	db   "Repeatedly slaps"
 	next "2-5 times.@"
 
-CometPunchDescription:
-	db   "Repeatedly punches"
-	next "2-5 times.@"
+ShadowClawDescription:
+	db   "Has a high criti-"
+	next "cal hit ratio.@"
 
 MegaPunchDescription:
 	db   "A powerful punch"
@@ -315,9 +315,9 @@ GuillotineDescription:
 	db   "A one-hit KO,"
 	next "pincer attack.@"
 
-RazorWindDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+AirSlashDescription:
+	db   "An attack that may"
+	next "cause flinching.@"
 
 SwordsDanceDescription:
 	db   "A dance that in-"
@@ -427,9 +427,9 @@ PoisonStingDescription:
 	db   "An attack that may"
 	next "poison the target.@"
 
-TwineedleDescription:
-	db   "Jabs the foe twice"
-	next "using stingers.@"
+XScissorDescription:
+	db   "Slashes the foe"
+	next "with crossed arms.@"
 
 PinMissileDescription:
 	db   "Fires pins that"
@@ -755,7 +755,7 @@ LickDescription:
 	db   "An attack that may"
 	next "cause paralysis.@"
 
-SmogDescription:
+PoisonJabDescription:
 	db   "An attack that may"
 	next "poison the foe.@"
 
@@ -775,9 +775,9 @@ WaterfallDescription:
 	db   "An aquatic charge"
 	next "attack.@"
 
-ClampDescription:
-	db   "Traps the foe for"
-	next "2-5 turns.@"
+PowerGemDescription:
+	db   "Attacks with a"
+	next "sparkling beam.@"
 
 SwiftDescription:
 	db   "An attack that"
@@ -787,9 +787,9 @@ SkullBashDescription:
 	db   "1st turn: Prepare"
 	next "2nd turn: Attack@"
 
-SpikeCannonDescription:
-	db   "Fires spikes to"
-	next "hit 2-5 times.@"
+FlashCannonDescription:
+	db   "May lower the foe's"
+	next "SPCL.DEF.@"
 
 ConstrictDescription:
 	db   "An attack that may"
@@ -1131,9 +1131,9 @@ ReturnDescription:
 	db   "An attack that is"
 	next "based on loyalty.@"
 
-PresentDescription:
-	db   "A bomb that may"
-	next "restore HP.@"
+SeedBombDescription:
+	db   "Hurls a hard seed"
+	next "at the foe.@"
 
 FrustrationDescription:
 	db   "An attack based on"

@@ -22,6 +22,9 @@ enough that every move has a reason to exist.
 - Existing Fairy status retcons are `SWEET_KISS`, `CHARM`, and `MOONLIGHT`.
 - Phase A Fairy damaging moves are implemented by ID replacement:
   `DISARMING_VOICE`, `PLAY_ROUGH`, `MOONBLAST`, and `DRAINING_KISS`.
+- Batch B core coverage moves are implemented by ID replacement:
+  `SHADOW_CLAW`, `POISON_JAB`, `X_SCISSOR`, `FLASH_CANNON`, `POWER_GEM`,
+  `AIR_SLASH`, and `SEED_BOMB`.
 - Hidden Power remains unchanged and must not become Fairy.
 - The move table still uses the vanilla move ID range and vanilla move data
   structure.
@@ -182,8 +185,7 @@ Priority gaps to review later:
 
 - Physical Electric: needed if Crystal Modern includes physical Electric
   attackers. Avoid over-distributing strong Electric coverage.
-- Physical Ghost: needed for Ghost attackers that use Attack. Shadow Ball already
-  serves this role in the current move table.
+- Physical Ghost: `SHADOW_CLAW` and `SHADOW_BALL` now serve this role.
 - Physical Dark: needed for Dark attackers. Bite and Crunch currently serve this
   role, with Crunch corrected to Physical.
 
@@ -264,17 +266,15 @@ for early-game pacing, capture setup, progression, or flavor.
 This is a review queue, not an approval list. Each move still needs a separate
 implementation plan.
 
-- Fairy attack: Disarming Voice, Draining Kiss, Moonblast, or Play Rough.
 - Physical Electric: Spark, Thunder Fang, Wild Charge, or Nuzzle if a status
   utility role is needed.
-- Physical Ghost: Shadow Claw, Astonish, or Phantom Force only if the effect can
-  be simplified.
 - Physical Dark: Knock Off, Assurance, Sucker Punch, or Night Slash, with strong
   caution around effects that require item loss, prediction, or complex AI.
 - Clean utility: U-turn, Will-O-Wisp, Taunt, or Helping Hand only if the battle
   format and AI can support them gracefully.
-- Type balance candidates: Energy Ball, Power Gem, X-Scissor, Flash Cannon, or
-  Air Slash if specific custom Pokemon need them.
+- Type balance candidates: Energy Ball or other simple coverage moves only if
+  specific custom Pokemon need them. `POWER_GEM`, `X_SCISSOR`,
+  `FLASH_CANNON`, and `AIR_SLASH` are already implemented.
 
 Prefer the smallest first batch that proves the move workflow: one Fairy attack,
 one physical Electric option if needed, one utility move if needed, and no more

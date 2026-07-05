@@ -213,7 +213,7 @@ BeedrillEvosAttacks:
 	db 1, FURY_ATTACK
 	db 10, FURY_ATTACK
 	db 15, FOCUS_ENERGY
-	db 20, TWINEEDLE
+	db 20, PIN_MISSILE
 	db 25, RAGE
 	db 30, PURSUIT
 	db 35, PIN_MISSILE
@@ -1217,7 +1217,7 @@ ShellderEvosAttacks:
 	db 17, AURORA_BEAM
 	db 25, PROTECT
 	db 33, LEER
-	db 41, CLAMP
+	db 41, WHIRLPOOL
 	db 49, ICE_BEAM
 	db 0 ; no more level-up moves
 
@@ -1228,7 +1228,7 @@ CloysterEvosAttacks:
 	db 1, AURORA_BEAM
 	db 1, PROTECT
 	db 33, SPIKES
-	db 41, SPIKE_CANNON
+	db 41, AURORA_BEAM
 	db 0 ; no more level-up moves
 
 GastlyEvosAttacks:
@@ -1449,7 +1449,7 @@ HitmonleeEvosAttacks:
 
 HitmonchanEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, COMET_PUNCH
+	db 1, MACH_PUNCH
 	db 7, AGILITY
 	db 13, PURSUIT
 	db 26, THUNDERPUNCH
@@ -1478,7 +1478,7 @@ KoffingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_GAS
 	db 1, TACKLE
-	db 9, SMOG
+	db 9, POISON_GAS
 	db 17, SELFDESTRUCT
 	db 21, SLUDGE
 	db 25, SMOKESCREEN
@@ -1491,9 +1491,9 @@ WeezingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_GAS
 	db 1, TACKLE
-	db 1, SMOG
+	db 1, POISON_GAS
 	db 1, SELFDESTRUCT
-	db 9, SMOG
+	db 9, POISON_GAS
 	db 17, SELFDESTRUCT
 	db 21, SLUDGE
 	db 25, SMOKESCREEN
@@ -1561,7 +1561,7 @@ TangelaEvosAttacks:
 
 KangaskhanEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, COMET_PUNCH
+	db 1, MEGA_PUNCH
 	db 7, LEER
 	db 13, BITE
 	db 19, TAIL_WHIP
@@ -1714,10 +1714,10 @@ MagmarEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 1, LEER
-	db 1, SMOG
+	db 1, SMOKESCREEN
 	db 1, FIRE_PUNCH
 	db 7, LEER
-	db 13, SMOG
+	db 13, SMOKESCREEN
 	db 19, FIRE_PUNCH
 	db 25, SMOKESCREEN
 	db 33, SUNNY_DAY
@@ -1845,7 +1845,7 @@ FlareonEvosAttacks:
 	db 23, QUICK_ATTACK
 	db 30, BITE
 	db 36, FIRE_SPIN
-	db 42, SMOG
+	db 42, SMOKESCREEN
 	db 47, LEER
 	db 52, FLAMETHROWER
 	db 0 ; no more level-up moves
@@ -1887,7 +1887,7 @@ OmastarEvosAttacks:
 	db 19, WATER_GUN
 	db 31, LEER
 	db 37, PROTECT
-	db 40, SPIKE_CANNON
+	db 40, ANCIENTPOWER
 	db 54, ANCIENTPOWER
 	db 65, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -2247,7 +2247,7 @@ LedybaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 8, SUPERSONIC
-	db 15, COMET_PUNCH
+	db 15, MACH_PUNCH
 	db 22, LIGHT_SCREEN
 	db 22, REFLECT
 	db 22, SAFEGUARD
@@ -2262,7 +2262,7 @@ LedianEvosAttacks:
 	db 1, TACKLE
 	db 1, SUPERSONIC
 	db 8, SUPERSONIC
-	db 15, COMET_PUNCH
+	db 15, MACH_PUNCH
 	db 24, LIGHT_SCREEN
 	db 24, REFLECT
 	db 24, SAFEGUARD
@@ -2918,7 +2918,7 @@ UrsaringEvosAttacks:
 SlugmaEvosAttacks:
 	db EVOLVE_LEVEL, 38, MAGCARGO
 	db 0 ; no more evolutions
-	db 1, SMOG
+	db 1, EMBER
 	db 8, EMBER
 	db 15, ROCK_THROW
 	db 22, HARDEN
@@ -2930,7 +2930,7 @@ SlugmaEvosAttacks:
 
 MagcargoEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SMOG
+	db 1, EMBER
 	db 1, EMBER
 	db 1, ROCK_THROW
 	db 8, EMBER
@@ -2975,7 +2975,7 @@ CorsolaEvosAttacks:
 	db 13, BUBBLE
 	db 19, RECOVER
 	db 25, BUBBLEBEAM
-	db 31, SPIKE_CANNON
+	db 31, BUBBLEBEAM
 	db 37, MIRROR_COAT
 	db 43, ANCIENTPOWER
 	db 0 ; no more level-up moves
@@ -3008,7 +3008,7 @@ OctilleryEvosAttacks:
 
 DelibirdEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, PRESENT
+	db 1, PECK
 	db 0 ; no more level-up moves
 
 MantineEvosAttacks:
@@ -3040,7 +3040,7 @@ HoundourEvosAttacks:
 	db 1, LEER
 	db 1, EMBER
 	db 7, ROAR
-	db 13, SMOG
+	db 13, ROAR
 	db 20, BITE
 	db 27, FAINT_ATTACK
 	db 35, FLAMETHROWER
@@ -3052,7 +3052,7 @@ HoundoomEvosAttacks:
 	db 1, LEER
 	db 1, EMBER
 	db 7, ROAR
-	db 13, SMOG
+	db 13, ROAR
 	db 20, BITE
 	db 30, FAINT_ATTACK
 	db 41, FLAMETHROWER
@@ -3191,7 +3191,7 @@ MagbyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 7, LEER
-	db 13, SMOG
+	db 13, SMOKESCREEN
 	db 19, FIRE_PUNCH
 	db 25, SMOKESCREEN
 	db 31, SUNNY_DAY

@@ -28,6 +28,9 @@
 - Phase A Fairy move replacements: `BARRAGE` -> `DISARMING_VOICE`, `SHARPEN` -> `PLAY_ROUGH`, `KINESIS` -> `MOONBLAST`, `PSYWAVE` -> `DRAINING_KISS`
 - Phase A new move effects: None; all four moves reuse existing effects
 - Phase A known move behavior: `DRAINING_KISS` uses existing 50 percent drain behavior
+- Batch B coverage move replacements: `COMET_PUNCH` -> `SHADOW_CLAW`, `SMOG` -> `POISON_JAB`, `TWINEEDLE` -> `X_SCISSOR`, `SPIKE_CANNON` -> `FLASH_CANNON`, `CLAMP` -> `POWER_GEM`, `RAZOR_WIND` -> `AIR_SLASH`, `PRESENT` -> `SEED_BOMB`
+- Batch B new move effects: None; all seven moves reuse existing effects
+- Batch B TM status: No TMs added; distribution is intentionally deferred to the custom Pokedex and TM passes
 - Animation policy: Reuse existing animations unless a new move requires a documented custom animation.
 - New move effect policy: TBD
 
