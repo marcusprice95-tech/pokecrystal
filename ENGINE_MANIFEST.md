@@ -14,7 +14,7 @@
 - Physical/Special split: Implemented; move category is stored in the high bits of `MOVE_TYPE`
 - Fairy type: Implemented as raw type ID after `DARK`; remains below `TYPE_MASK`
 - Type chart: Modern type chart, including Fairy and modern Steel neutrality to Ghost/Dark
-- Battle bug fixes applied: None in this branch yet
+- Battle bug fixes applied: Burn reduces physical move damage only; burn residual remains 1/8 max HP
 - Known battle limitations: Vanilla battle mechanics and known Crystal bugs still apply unless documented otherwise.
 
 ## Move System

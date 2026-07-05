@@ -2608,6 +2608,7 @@ PlayerAttackDamage:
 .thickclub
 ; Note: Returns player attack at hl in hl.
 	call ThickClubBoost
+	call HalvePhysicalDamageIfBurned
 
 .done
 	call TruncateHL_BC
@@ -2618,6 +2619,22 @@ PlayerAttackDamage:
 
 	ld a, 1
 	and a
+	ret
+
+HalvePhysicalDamageIfBurned:
+; Crystal Modern: burn modifies physical move damage, not the Attack stat.
+; This helper is called only from physical damage-stat paths, so special
+; moves and non-move Attack uses are left alone.
+	ld a, BATTLE_VARS_STATUS
+	call GetBattleVar
+	and 1 << BRN
+	ret z
+	srl h
+	rr l
+	ld a, h
+	or l
+	ret nz
+	inc l
 	ret
 
 TruncateHL_BC:
@@ -2855,6 +2872,7 @@ EnemyAttackDamage:
 
 .thickclub
 	call ThickClubBoost
+	call HalvePhysicalDamageIfBurned
 
 .done
 	call TruncateHL_BC
