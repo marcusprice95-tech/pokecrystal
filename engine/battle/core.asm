@@ -1551,7 +1551,8 @@ HandleDefrost:
 	ret nz
 
 	call BattleRandom
-	cp 10 percent
+	; Crystal Modern: thaw naturally more often than vanilla Crystal.
+	cp 20 percent
 	ret nc
 	xor a
 	ld [wBattleMonStatus], a
@@ -1572,7 +1573,8 @@ HandleDefrost:
 	and a
 	ret nz
 	call BattleRandom
-	cp 10 percent
+	; Crystal Modern: thaw naturally more often than vanilla Crystal.
+	cp 20 percent
 	ret nc
 	xor a
 	ld [wEnemyMonStatus], a
