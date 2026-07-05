@@ -20,7 +20,6 @@ MoveGrammar:
 	db ACID_ARMOR
 	db BONEMERANG
 	db REST
-	db SHARPEN
 	db SUBSTITUTE
 	db MIND_READER
 	db SNORE
@@ -49,7 +48,6 @@ MoveGrammar:
 	db AGILITY
 	db MIMIC
 	db DOUBLE_TEAM
-	db BARRAGE
 	db TRANSFORM
 	db STRUGGLE
 	db SCARY_FACE

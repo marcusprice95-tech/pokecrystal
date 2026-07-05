@@ -25,6 +25,8 @@
 - Move data fields: animation, effect, power, category-coded type, accuracy, PP, effect chance
 - Move category storage: `MOVE_TYPE = category bits | raw type id`; use `TYPE_MASK` before raw type lookups
 - Existing Fairy-type move retcons: `SWEET_KISS`, `CHARM`, `MOONLIGHT`
+- Phase A Fairy move replacements: `BARRAGE` -> `DISARMING_VOICE`, `SHARPEN` -> `PLAY_ROUGH`, `KINESIS` -> `MOONBLAST`, `PSYWAVE` -> `DRAINING_KISS`
+- Phase A new move effects: None; all four moves reuse existing effects
 - Animation policy: Reuse existing animations unless a new move requires a documented custom animation.
 - New move effect policy: TBD
 

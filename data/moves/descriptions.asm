@@ -134,13 +134,13 @@ MoveDescriptions::
 	dw SpikeCannonDescription
 	dw ConstrictDescription
 	dw AmnesiaDescription
-	dw KinesisDescription
+	dw MoonblastDescription
 	dw SoftboiledDescription
 	dw HiJumpKickDescription
 	dw GlareDescription
 	dw DreamEaterDescription
 	dw PoisonGasDescription
-	dw BarrageDescription
+	dw DisarmingVoiceDescription
 	dw LeechLifeDescription
 	dw LovelyKissDescription
 	dw SkyAttackDescription
@@ -149,7 +149,7 @@ MoveDescriptions::
 	dw DizzyPunchDescription
 	dw SporeDescription
 	dw FlashDescription
-	dw PsywaveDescription
+	dw DrainingKissDescription
 	dw SplashDescription
 	dw AcidArmorDescription
 	dw CrabhammerDescription
@@ -159,7 +159,7 @@ MoveDescriptions::
 	dw RestDescription
 	dw RockSlideDescription
 	dw HyperFangDescription
-	dw SharpenDescription
+	dw PlayRoughDescription
 	dw ConversionDescription
 	dw TriAttackDescription
 	dw SuperFangDescription
@@ -799,9 +799,9 @@ AmnesiaDescription:
 	db   "Sharply raises the"
 	next "user's SPCL.DEF.@"
 
-KinesisDescription:
-	db   "Reduces the foe's"
-	next "accuracy.@"
+MoonblastDescription:
+	db   "May lower the foe's"
+	next "SPCL.ATK.@"
 
 SoftboiledDescription:
 	db   "Restores HP by 1/2"
@@ -823,9 +823,9 @@ PoisonGasDescription:
 	db   "A move that may"
 	next "poison the foe.@"
 
-BarrageDescription:
-	db   "Throws orbs to hit"
-	next "2-5 times.@"
+DisarmingVoiceDescription:
+	db   "A Fairy attack"
+	next "that never misses.@"
 
 LeechLifeDescription:
 	db   "Steals 1/2 of the"
@@ -859,9 +859,9 @@ FlashDescription:
 	db   "Blinds the foe to"
 	next "reduce accuracy.@"
 
-PsywaveDescription:
-	db   "An attack with"
-	next "variable power.@"
+DrainingKissDescription:
+	db   "Steals 1/2 of the"
+	next "damage inflicted.@"
 
 SplashDescription:
 	db   "Has no effect"
@@ -899,9 +899,9 @@ HyperFangDescription:
 	db   "An attack that may"
 	next "cause flinching.@"
 
-SharpenDescription:
-	db   "A move that raises"
-	next "the user's ATTACK.@"
+PlayRoughDescription:
+	db   "May lower the foe's"
+	next "ATTACK.@"
 
 ConversionDescription:
 	db   "Change user's type"

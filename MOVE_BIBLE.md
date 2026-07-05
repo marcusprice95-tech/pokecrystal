@@ -19,13 +19,14 @@ enough that every move has a reason to exist.
 - Fairy type is implemented as a raw type below `TYPE_MASK`.
 - The modern type chart is implemented, including Steel neutrality to Ghost and
   Dark.
-- Existing Fairy status retcons are limited to `SWEET_KISS`, `CHARM`, and
-  `MOONLIGHT`.
+- Existing Fairy status retcons are `SWEET_KISS`, `CHARM`, and `MOONLIGHT`.
+- Phase A Fairy damaging moves are implemented by ID replacement:
+  `DISARMING_VOICE`, `PLAY_ROUGH`, `MOONBLAST`, and `DRAINING_KISS`.
 - Hidden Power remains unchanged and must not become Fairy.
 - The move table still uses the vanilla move ID range and vanilla move data
   structure.
-- Reusable TMs, expanded move IDs, new Fairy damaging moves, and larger move
-  batches are not implemented yet.
+- Reusable TMs, expanded move IDs, and larger move batches are not implemented
+  yet.
 
 ## Category Rules
 
@@ -156,18 +157,18 @@ Good move pools should:
 
 ## Fairy Move Needs
 
-Fairy currently exists as a type, but the implemented Fairy moves are status
-moves only. Crystal Modern will eventually need a small, carefully chosen Fairy
-damaging package.
+Fairy now has a small Phase A damaging package: `DISARMING_VOICE`,
+`DRAINING_KISS`, `MOONBLAST`, and `PLAY_ROUGH`. These moves exist to make Fairy
+usable without broad TM distribution or a large modern move import.
 
-Future Fairy move needs:
+Remaining Fairy move needs:
 
-- One reliable special Fairy attack for general STAB.
-- One stronger or later-game Fairy attack with a clear tradeoff.
-- Possibly one physical Fairy attack if the final Pokedex includes physical
-  Fairy attackers.
 - Fairy TM support only after the final Fairy roster and TM philosophy are
   reviewed.
+- Final level-up distribution after the custom Pokedex identifies which Pokemon
+  are meant to use Fairy STAB.
+- Review whether `DRAINING_KISS` should keep Crystal's half-drain behavior or
+  receive a later custom 75 percent drain effect.
 
 Do not add broad Fairy coverage until the custom Pokedex identifies which
 Pokemon are meant to use it.

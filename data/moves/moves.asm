@@ -147,13 +147,13 @@ Moves:
 	move SPIKE_CANNON,  EFFECT_MULTI_HIT,           20, NORMAL,       PHYSICAL, 100, 15,   0
 	move CONSTRICT,     EFFECT_SPEED_DOWN_HIT,      10, NORMAL,       PHYSICAL, 100, 35,  10
 	move AMNESIA,       EFFECT_SP_DEF_UP_2,          0, PSYCHIC_TYPE, STATUS,   100, 20,   0
-	move KINESIS,       EFFECT_ACCURACY_DOWN,        0, PSYCHIC_TYPE, STATUS,    80, 15,   0
+	move MOONBLAST,     EFFECT_SP_ATK_DOWN_HIT,     95, FAIRY,        SPECIAL,  100, 15,  30
 	move SOFTBOILED,    EFFECT_HEAL,                 0, NORMAL,       STATUS,   100, 10,   0
 	move HI_JUMP_KICK,  EFFECT_JUMP_KICK,           85, FIGHTING,     PHYSICAL,  90, 20,   0
 	move GLARE,         EFFECT_PARALYZE,             0, NORMAL,       STATUS,    75, 30,   0
 	move DREAM_EATER,   EFFECT_DREAM_EATER,        100, PSYCHIC_TYPE, SPECIAL,  100, 15,   0
 	move POISON_GAS,    EFFECT_POISON,               0, POISON,       STATUS,    55, 40,   0
-	move BARRAGE,       EFFECT_MULTI_HIT,           15, NORMAL,       PHYSICAL,  85, 20,   0
+	move DISARMING_VOICE, EFFECT_ALWAYS_HIT,        40, FAIRY,        SPECIAL,  100, 15,   0
 	move LEECH_LIFE,    EFFECT_LEECH_HIT,           20, BUG,          PHYSICAL, 100, 15,   0
 	move LOVELY_KISS,   EFFECT_SLEEP,                0, NORMAL,       STATUS,    75, 10,   0
 	move SKY_ATTACK,    EFFECT_SKY_ATTACK,         140, FLYING,       PHYSICAL,  90,  5,   0
@@ -162,7 +162,7 @@ Moves:
 	move DIZZY_PUNCH,   EFFECT_CONFUSE_HIT,         70, NORMAL,       PHYSICAL, 100, 10,  20
 	move SPORE,         EFFECT_SLEEP,                0, GRASS,        STATUS,   100, 15,   0
 	move FLASH,         EFFECT_ACCURACY_DOWN,        0, NORMAL,       STATUS,    70, 20,   0
-	move PSYWAVE,       EFFECT_PSYWAVE,              1, PSYCHIC_TYPE, SPECIAL,   80, 15,   0
+	move DRAINING_KISS, EFFECT_LEECH_HIT,           50, FAIRY,        SPECIAL,  100, 10,   0
 	move SPLASH,        EFFECT_SPLASH,               0, NORMAL,       STATUS,   100, 40,   0
 	move ACID_ARMOR,    EFFECT_DEFENSE_UP_2,         0, POISON,       STATUS,   100, 40,   0
 	move CRABHAMMER,    EFFECT_NORMAL_HIT,          90, WATER,        PHYSICAL,  85, 10,   0
@@ -172,7 +172,7 @@ Moves:
 	move REST,          EFFECT_HEAL,                 0, PSYCHIC_TYPE, STATUS,   100, 10,   0
 	move ROCK_SLIDE,    EFFECT_FLINCH_HIT,          75, ROCK,         PHYSICAL,  90, 10,  30
 	move HYPER_FANG,    EFFECT_FLINCH_HIT,          80, NORMAL,       PHYSICAL,  90, 15,  10
-	move SHARPEN,       EFFECT_ATTACK_UP,            0, NORMAL,       STATUS,   100, 30,   0
+	move PLAY_ROUGH,    EFFECT_ATTACK_DOWN_HIT,     90, FAIRY,        PHYSICAL,  90, 10,  10
 	move CONVERSION,    EFFECT_CONVERSION,           0, NORMAL,       STATUS,   100, 30,   0
 	move TRI_ATTACK,    EFFECT_TRI_ATTACK,          80, NORMAL,       SPECIAL,  100, 10,  20
 	move SUPER_FANG,    EFFECT_SUPER_FANG,           1, NORMAL,       PHYSICAL,  90, 10,   0
