@@ -14,7 +14,7 @@
 - Physical/Special split: Implemented; move category is stored in the high bits of `MOVE_TYPE`
 - Fairy type: Implemented as raw type ID after `DARK`; remains below `TYPE_MASK`
 - Type chart: Modern type chart, including Fairy and modern Steel neutrality to Ghost/Dark
-- Battle bug fixes applied: Burn reduces physical move damage only; burn residual remains 1/8 max HP
+- Battle bug fixes applied: Burn reduces physical move damage only; burn residual remains 1/8 max HP; confusion self-hit chance is approximately 1/3; Berserk Gene confusion duration is initialized correctly
 - Known battle limitations: Vanilla battle mechanics and known Crystal bugs still apply unless documented otherwise.
 
 ## Move System

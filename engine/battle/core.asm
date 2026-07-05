@@ -390,11 +390,22 @@ HandleBerserkGene:
 	call GetPartyLocation
 	xor a
 	ld [hl], a
-; BUG: Berserk Gene's confusion lasts for 256 turns or the previous Pokémon's confusion count (see docs/bugs_and_glitches.md)
+; Crystal Modern: Berserk Gene uses normal 2-5 turn confusion.
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVarAddr
 	push af
 	set SUBSTATUS_CONFUSED, [hl]
+	ld bc, wPlayerConfuseCount
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_confuse_count
+	ld bc, wEnemyConfuseCount
+.got_confuse_count
+	call BattleRandom
+	and %11
+	inc a
+	inc a
+	ld [bc], a
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVarAddr
 	push hl

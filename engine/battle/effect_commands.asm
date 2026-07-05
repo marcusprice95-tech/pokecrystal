@@ -260,9 +260,9 @@ BattleCommand_CheckTurn:
 	ld de, ANIM_CONFUSED
 	call FarPlayBattleAnimation
 
-	; 50% chance of hitting itself
+	; Crystal Modern: 1/3 chance of hitting itself.
 	call BattleRandom
-	cp 50 percent + 1
+	cp 1 out_of 3
 	jr nc, .not_confused
 
 	; clear confusion-dependent substatus
@@ -489,9 +489,9 @@ CheckEnemyTurn:
 	ld de, ANIM_CONFUSED
 	call FarPlayBattleAnimation
 
-	; 50% chance of hitting itself
+	; Crystal Modern: 1/3 chance of hitting itself.
 	call BattleRandom
-	cp 50 percent + 1
+	cp 1 out_of 3
 	jr nc, .not_confused
 
 	; clear confusion-dependent substatus
