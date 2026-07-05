@@ -470,11 +470,25 @@ PlayerDepositItemMenu:
 	ld [wSpriteUpdatesEnabled], a
 	farcall CheckItemMenu
 	ld a, [wItemAttributeValue]
+	push af
+	farcall CheckItemPocket
+	ld a, [wItemAttributeValue]
+	cp TM_HM
+	jr z, .CantDepositTMHM
+	pop af
+	ld [wItemAttributeValue], a
 	ld hl, .dw
 	rst JumpTable
+.done
 	pop af
 	ld [wSpriteUpdatesEnabled], a
 	ret
+
+.CantDepositTMHM:
+	pop af
+	ld hl, .ItemsTooImportantText
+	call MenuTextboxBackup
+	jr .done
 
 .dw
 ; entries correspond to ITEMMENU_* constants
@@ -558,6 +572,10 @@ PlayerDepositItemMenu:
 
 .PlayersPCNoRoomDepositText:
 	text_far _PlayersPCNoRoomDepositText
+	text_end
+
+.ItemsTooImportantText:
+	text_far _ItemsTooImportantText
 	text_end
 
 PlayerMailBoxMenu:

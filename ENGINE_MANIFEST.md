@@ -49,10 +49,13 @@
 
 ## Items / TMs / HMs
 
-- TM reuse policy: Vanilla single-use TMs
+- TM reuse policy: Implemented; TMs remain owned after successful teaching
 - HM policy: Vanilla HMs
-- TM/HM pocket behavior: Vanilla TM/HM pocket
-- Duplicate acquisition policy: Vanilla behavior
+- TM/HM pocket behavior: TM/HM pocket hides TM ownership quantities and shows owned TMs/HMs only
+- TM ownership storage: Existing `wTMsHMs` bytes are unchanged; any nonzero TM value is treated as owned
+- TM restrictions: TMs cannot be tossed, sold, deposited in the PC, or held by Pokemon
+- TM mart behavior: Owned TMs cannot be purchased again; new TM purchases are limited to one copy
+- Duplicate acquisition policy: TM receipt is capped to owned/not-owned semantics; map rewards and gift scripts were not broadly redesigned
 
 ## Quality Of Life Features
 

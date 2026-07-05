@@ -402,6 +402,18 @@ CheckKeyItems:
 	ret
 
 ReceiveTMHM:
+	ld a, c
+	cp NUM_TMS + 1
+	jr nc, .hm
+	dec c
+	ld b, 0
+	ld hl, wTMsHMs
+	add hl, bc
+	ld [hl], 1
+	scf
+	ret
+
+.hm
 	dec c
 	ld b, 0
 	ld hl, wTMsHMs
@@ -419,6 +431,9 @@ ReceiveTMHM:
 	ret
 
 TossTMHM:
+	ld a, c
+	cp NUM_TMS + 1
+	jr c, .nope
 	dec c
 	ld b, 0
 	ld hl, wTMsHMs

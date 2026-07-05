@@ -371,6 +371,8 @@ LoadBuyMenuText:
 	ret
 
 MartAskPurchaseQuantity:
+	call MartCheckOwnedTM
+	ret c
 	call GetMartDialogGroup ; gets a pointer from GetMartDialogGroup.MartTextFunctionPointers
 	inc hl
 	inc hl
@@ -502,12 +504,57 @@ BuyMenuLoop:
 	ret
 
 StandardMartAskPurchaseQuantity:
+	call MartItemIsTM
+	ld a, 1
+	jr c, .got_quantity
 	ld a, MAX_ITEM_STACK
+.got_quantity
 	ld [wItemQuantity], a
 	ld a, MARTTEXT_HOW_MANY
 	call LoadBuyMenuText
 	farcall SelectQuantityToBuy
 	call ExitMenu
+	ret
+
+MartCheckOwnedTM:
+	call MartItemIsTM
+	jr nc, .not_owned
+	ld a, c
+	dec a
+	ld b, 0
+	ld hl, wTMsHMs
+	add hl, bc
+	ld a, [hl]
+	and a
+	jr z, .not_owned
+	ld hl, MartAlreadyHaveTMText
+	call PrintText
+	call JoyWaitAorB
+	scf
+	ret
+
+.not_owned
+	and a
+	ret
+
+MartItemIsTM:
+	ld a, [wMartItemID]
+	ld [wCurItem], a
+	farcall CheckItemPocket
+	ld a, [wItemAttributeValue]
+	cp TM_HM
+	jr nz, .not_tm
+	ld a, [wMartItemID]
+	ld c, a
+	callfar GetTMHMNumber
+	ld a, c
+	cp NUM_TMS + 1
+	jr nc, .not_tm
+	scf
+	ret
+
+.not_tm
+	and a
 	ret
 
 MartConfirmPurchase:
@@ -561,7 +608,11 @@ RooftopSaleAskPurchaseQuantity:
 	ld a, MARTTEXT_HOW_MANY
 	call LoadBuyMenuText
 	call .GetSalePrice
+	call MartItemIsTM
+	ld a, 1
+	jr c, .got_quantity
 	ld a, MAX_ITEM_STACK
+.got_quantity
 	ld [wItemQuantity], a
 	farcall RooftopSale_SelectQuantityToBuy
 	call ExitMenu
@@ -587,6 +638,10 @@ RooftopSaleAskPurchaseQuantity:
 
 MartHowManyText:
 	text_far _MartHowManyText
+	text_end
+
+MartAlreadyHaveTMText:
+	text_far _MartAlreadyHaveTMText
 	text_end
 
 MartFinalPriceText:
