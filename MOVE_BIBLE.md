@@ -25,6 +25,8 @@ enough that every move has a reason to exist.
 - Batch B core coverage moves are implemented by ID replacement:
   `SHADOW_CLAW`, `POISON_JAB`, `X_SCISSOR`, `FLASH_CANNON`, `POWER_GEM`,
   `AIR_SLASH`, and `SEED_BOMB`.
+- Batch C polish coverage moves are implemented by ID replacement:
+  `DRAGON_PULSE`, `DRAGON_CLAW`, and `BUG_BITE`.
 - Hidden Power remains unchanged and must not become Fairy.
 - The move table still uses the vanilla move ID range and vanilla move data
   structure.
@@ -270,6 +272,8 @@ implementation plan.
   utility role is needed.
 - Physical Dark: Knock Off, Assurance, Sucker Punch, or Night Slash, with strong
   caution around effects that require item loss, prediction, or complex AI.
+- Dragon coverage: `DRAGON_PULSE` and `DRAGON_CLAW` are implemented as the
+  simple special and physical Dragon standards.
 - Clean utility: U-turn, Will-O-Wisp, Taunt, or Helping Hand only if the battle
   format and AI can support them gracefully.
 - Type balance candidates: Energy Ball or other simple coverage moves only if

@@ -368,7 +368,7 @@ HorseaEggMoves:
 	db OCTAZOOKA
 	db DISABLE
 	db SPLASH
-	db DRAGON_RAGE
+	db TWISTER
 	db -1 ; end
 
 GoldeenEggMoves:
@@ -624,7 +624,7 @@ GirafarigEggMoves:
 
 PinecoEggMoves:
 	db REFLECT
-	db PIN_MISSILE
+	db SPIKES
 	db FLAIL
 	db SWIFT
 	db -1 ; end

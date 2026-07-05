@@ -36,6 +36,14 @@ is obsolete, low-impact, or unsuitable for Crystal Modern's battle design.
 | `RAZOR_WIND` | `$0d` | `AIR_SLASH` | Flying | Special | Two-turn Normal attack with poor clarity and low practical value. The slot adds a special Flying attack with a simple flinch effect. | Vanilla egg move references now use `GROWTH`, `WING_ATTACK`, or `SLASH`; charge-turn/high-crit metadata was removed from the old slot. | Implemented |
 | `PRESENT` | `$d9` | `SEED_BOMB` | Grass | Physical | Confusing variable-damage/healing move with poor player clarity. The slot adds a clean physical Grass attack. | Vanilla level-up, egg, and trainer references now use nearby Normal/status/flavor moves such as `PECK`, `SWIFT`, `DIZZY_PUNCH`, `HEADBUTT`, or `DEFENSE_CURL`. | Implemented |
 
+## Batch C: Polish Coverage
+
+| Original move | Original move ID | Replacement move | New type | New category | Reason for replacement | Distribution impact | Status |
+| --- | ---: | --- | --- | --- | --- | --- | --- |
+| `DRAGON_RAGE` | `$52` | `DRAGON_PULSE` | Dragon | Special | Fixed 40 HP damage is useful early but poor for long-term balancing and custom move progression. The slot adds a clear special Dragon STAB option. | Vanilla level-up, trainer, Battle Tower, and egg move references now use `TWISTER` to preserve Dragon flavor without granting `DRAGON_PULSE` by accident. | Implemented |
+| `VICEGRIP` | `$0b` | `DRAGON_CLAW` | Dragon | Physical | Redundant Normal physical attack with limited identity. The slot adds a simple physical Dragon STAB option. | Vanilla Krabby/Kingler/Pinsir and trainer references now use `BUBBLE`, `BIND`, or `STOMP` to avoid accidental Dragon coverage. | Implemented |
+| `PIN_MISSILE` | `$2a` | `BUG_BITE` | Bug | Physical | Weak, inaccurate multi-hit move with awkward overlap after `X_SCISSOR` was added. The slot adds a compact mid-power Bug attack. | Vanilla Beedrill, Jolteon, Qwilfish, trainer, and egg move references now use `FURY_CUTTER`, `SWIFT`, `POISON_STING`, or `SPIKES` to avoid accidental Bug Bite distribution. | Implemented |
+
 ## Notes
 
 - Phase A should not expand `NUM_ATTACKS`.
@@ -46,5 +54,8 @@ is obsolete, low-impact, or unsuitable for Crystal Modern's battle design.
 - Batch B should not add new TMs.
 - Batch B should not intentionally distribute its new coverage to vanilla
   Pokemon; custom distribution belongs to the custom Pokedex pass.
+- Batch C should not expand `NUM_ATTACKS`.
+- Batch C should not add new TMs.
+- `BUG_BITE` intentionally has no berry-eating effect for now.
 - Old save files containing a replaced move ID will display and behave as the new
   move. This is expected for ID reuse and must be documented per milestone.

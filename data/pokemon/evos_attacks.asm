@@ -77,7 +77,7 @@ CharmanderEvosAttacks:
 	db 25, SCARY_FACE
 	db 31, FLAMETHROWER
 	db 37, SLASH
-	db 43, DRAGON_RAGE
+	db 43, TWISTER
 	db 49, FIRE_SPIN
 	db 0 ; no more level-up moves
 
@@ -93,7 +93,7 @@ CharmeleonEvosAttacks:
 	db 27, SCARY_FACE
 	db 34, FLAMETHROWER
 	db 41, SLASH
-	db 48, DRAGON_RAGE
+	db 48, TWISTER
 	db 55, FIRE_SPIN
 	db 0 ; no more level-up moves
 
@@ -110,7 +110,7 @@ CharizardEvosAttacks:
 	db 34, FLAMETHROWER
 	db 36, WING_ATTACK
 	db 44, SLASH
-	db 54, DRAGON_RAGE
+	db 54, TWISTER
 	db 64, FIRE_SPIN
 	db 0 ; no more level-up moves
 
@@ -213,10 +213,10 @@ BeedrillEvosAttacks:
 	db 1, FURY_ATTACK
 	db 10, FURY_ATTACK
 	db 15, FOCUS_ENERGY
-	db 20, PIN_MISSILE
+	db 20, FURY_CUTTER
 	db 25, RAGE
 	db 30, PURSUIT
-	db 35, PIN_MISSILE
+	db 35, FURY_CUTTER
 	db 40, AGILITY
 	db 0 ; no more level-up moves
 
@@ -1323,7 +1323,7 @@ KrabbyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 5, LEER
-	db 12, VICEGRIP
+	db 12, BUBBLE
 	db 16, HARDEN
 	db 23, STOMP
 	db 27, GUILLOTINE
@@ -1335,9 +1335,9 @@ KinglerEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 1, LEER
-	db 1, VICEGRIP
+	db 1, BUBBLE
 	db 5, LEER
-	db 12, VICEGRIP
+	db 12, BUBBLE
 	db 16, HARDEN
 	db 23, STOMP
 	db 27, GUILLOTINE
@@ -1728,7 +1728,7 @@ MagmarEvosAttacks:
 
 PinsirEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, VICEGRIP
+	db 1, BIND
 	db 7, FOCUS_ENERGY
 	db 13, BIND
 	db 19, SEISMIC_TOSS
@@ -1763,7 +1763,7 @@ GyaradosEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, THRASH
 	db 20, BITE
-	db 25, DRAGON_RAGE
+	db 25, TWISTER
 	db 30, LEER
 	db 35, TWISTER
 	db 40, HYDRO_PUMP
@@ -1830,7 +1830,7 @@ JolteonEvosAttacks:
 	db 16, THUNDERSHOCK
 	db 23, QUICK_ATTACK
 	db 30, DOUBLE_KICK
-	db 36, PIN_MISSILE
+	db 36, SWIFT
 	db 42, THUNDER_WAVE
 	db 47, AGILITY
 	db 52, THUNDER
@@ -1988,7 +1988,7 @@ DratiniEvosAttacks:
 	db 1, LEER
 	db 8, THUNDER_WAVE
 	db 15, TWISTER
-	db 22, DRAGON_RAGE
+	db 22, TWISTER
 	db 29, SLAM
 	db 36, AGILITY
 	db 43, SAFEGUARD
@@ -2005,7 +2005,7 @@ DragonairEvosAttacks:
 	db 1, TWISTER
 	db 8, THUNDER_WAVE
 	db 15, TWISTER
-	db 22, DRAGON_RAGE
+	db 22, TWISTER
 	db 29, SLAM
 	db 38, AGILITY
 	db 47, SAFEGUARD
@@ -2021,7 +2021,7 @@ DragoniteEvosAttacks:
 	db 1, TWISTER
 	db 8, THUNDER_WAVE
 	db 15, TWISTER
-	db 22, DRAGON_RAGE
+	db 22, TWISTER
 	db 29, SLAM
 	db 38, AGILITY
 	db 47, SAFEGUARD
@@ -2829,7 +2829,7 @@ QwilfishEvosAttacks:
 	db 10, HARDEN
 	db 10, MINIMIZE
 	db 19, WATER_GUN
-	db 28, PIN_MISSILE
+	db 28, POISON_STING
 	db 37, TAKE_DOWN
 	db 46, HYDRO_PUMP
 	db 0 ; no more level-up moves

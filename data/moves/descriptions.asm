@@ -11,7 +11,7 @@ MoveDescriptions::
 	dw IcePunchDescription
 	dw ThunderpunchDescription
 	dw ScratchDescription
-	dw VicegripDescription
+	dw DragonClawDescription
 	dw GuillotineDescription
 	dw AirSlashDescription
 	dw SwordsDanceDescription
@@ -42,7 +42,7 @@ MoveDescriptions::
 	dw TailWhipDescription
 	dw PoisonStingDescription
 	dw XScissorDescription
-	dw PinMissileDescription
+	dw BugBiteDescription
 	dw LeerDescription
 	dw BiteDescription
 	dw GrowlDescription
@@ -82,7 +82,7 @@ MoveDescriptions::
 	dw SleepPowderDescription
 	dw PetalDanceDescription
 	dw StringShotDescription
-	dw DragonRageDescription
+	dw DragonPulseDescription
 	dw FireSpinDescription
 	dw ThundershockDescription
 	dw ThunderboltDescription
@@ -307,9 +307,9 @@ ScratchDescription:
 	db   "Scratches with"
 	next "sharp claws.@"
 
-VicegripDescription:
-	db   "Grips with power-"
-	next "ful pincers.@"
+DragonClawDescription:
+	db   "Slashes the foe"
+	next "with sharp claws.@"
 
 GuillotineDescription:
 	db   "A one-hit KO,"
@@ -431,9 +431,9 @@ XScissorDescription:
 	db   "Slashes the foe"
 	next "with crossed arms.@"
 
-PinMissileDescription:
-	db   "Fires pins that"
-	next "strike 2-5 times.@"
+BugBiteDescription:
+	db   "Bites the foe"
+	next "with sharp fangs.@"
 
 LeerDescription:
 	db   "Reduces the foe's"
@@ -591,9 +591,9 @@ StringShotDescription:
 	db   "A move that lowers"
 	next "the foe's SPEED.@"
 
-DragonRageDescription:
-	db   "Always inflicts"
-	next "40HP damage.@"
+DragonPulseDescription:
+	db   "Attacks with a"
+	next "dragon shock wave.@"
 
 FireSpinDescription:
 	db   "Traps foe in fire"

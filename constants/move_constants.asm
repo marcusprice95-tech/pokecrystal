@@ -16,7 +16,7 @@
 	const ICE_PUNCH    ; 08
 	const THUNDERPUNCH ; 09
 	const SCRATCH      ; 0a
-	const VICEGRIP     ; 0b
+	const DRAGON_CLAW  ; 0b
 	const GUILLOTINE   ; 0c
 	const AIR_SLASH    ; 0d
 	const SWORDS_DANCE ; 0e
@@ -47,7 +47,7 @@
 	const TAIL_WHIP    ; 27
 	const POISON_STING ; 28
 	const X_SCISSOR    ; 29
-	const PIN_MISSILE  ; 2a
+	const BUG_BITE     ; 2a
 	const LEER         ; 2b
 	const BITE         ; 2c
 	const GROWL        ; 2d
@@ -87,7 +87,7 @@
 	const SLEEP_POWDER ; 4f
 	const PETAL_DANCE  ; 50
 	const STRING_SHOT  ; 51
-	const DRAGON_RAGE  ; 52
+	const DRAGON_PULSE ; 52
 	const FIRE_SPIN    ; 53
 	const THUNDERSHOCK ; 54
 	const THUNDERBOLT  ; 55

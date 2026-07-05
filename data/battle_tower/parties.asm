@@ -607,7 +607,7 @@ BattleTowerMons:
 
 	db GYARADOS
 	db MIRACLEBERRY
-	db HYPER_BEAM, DRAGON_RAGE, THUNDERBOLT, FIRE_BLAST
+	db HYPER_BEAM, TWISTER, THUNDERBOLT, FIRE_BLAST
 	dw 0 ; OT ID
 	bigdt 8000 ; Exp
 	; Stat exp
@@ -763,7 +763,7 @@ BattleTowerMons:
 
 	db AERODACTYL
 	db GOLD_BERRY
-	db REST, HYPER_BEAM, EARTHQUAKE, DRAGON_RAGE
+	db REST, HYPER_BEAM, EARTHQUAKE, TWISTER
 	dw 0 ; OT ID
 	bigdt 8000 ; Exp
 	; Stat exp
@@ -2069,7 +2069,7 @@ BattleTowerMons:
 
 	db CHARIZARD
 	db KINGS_ROCK
-	db FIRE_SPIN, DRAGON_RAGE, FLY, SLASH
+	db FIRE_SPIN, TWISTER, FLY, SLASH
 	dw 0 ; OT ID
 	bigdt 64000 ; Exp
 	; Stat exp

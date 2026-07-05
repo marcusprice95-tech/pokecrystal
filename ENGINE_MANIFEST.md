@@ -31,6 +31,9 @@
 - Batch B coverage move replacements: `COMET_PUNCH` -> `SHADOW_CLAW`, `SMOG` -> `POISON_JAB`, `TWINEEDLE` -> `X_SCISSOR`, `SPIKE_CANNON` -> `FLASH_CANNON`, `CLAMP` -> `POWER_GEM`, `RAZOR_WIND` -> `AIR_SLASH`, `PRESENT` -> `SEED_BOMB`
 - Batch B new move effects: None; all seven moves reuse existing effects
 - Batch B TM status: No TMs added; distribution is intentionally deferred to the custom Pokedex and TM passes
+- Batch C polish move replacements: `DRAGON_RAGE` -> `DRAGON_PULSE`, `VICEGRIP` -> `DRAGON_CLAW`, `PIN_MISSILE` -> `BUG_BITE`
+- Batch C new move effects: None; all three moves reuse existing effects
+- Batch C known move behavior: `BUG_BITE` does not eat or consume berries
 - Animation policy: Reuse existing animations unless a new move requires a documented custom animation.
 - New move effect policy: TBD
 

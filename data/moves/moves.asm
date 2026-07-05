@@ -24,7 +24,7 @@ Moves:
 	move ICE_PUNCH,     EFFECT_FREEZE_HIT,          75, ICE,          PHYSICAL, 100, 15,  10
 	move THUNDERPUNCH,  EFFECT_PARALYZE_HIT,        75, ELECTRIC,     PHYSICAL, 100, 15,  10
 	move SCRATCH,       EFFECT_NORMAL_HIT,          40, NORMAL,       PHYSICAL, 100, 35,   0
-	move VICEGRIP,      EFFECT_NORMAL_HIT,          55, NORMAL,       PHYSICAL, 100, 30,   0
+	move DRAGON_CLAW,   EFFECT_NORMAL_HIT,          80, DRAGON,       PHYSICAL, 100, 15,   0
 	move GUILLOTINE,    EFFECT_OHKO,                 0, NORMAL,       PHYSICAL,  30,  5,   0
 	move AIR_SLASH,     EFFECT_FLINCH_HIT,          75, FLYING,       SPECIAL,   95, 15,  30
 	move SWORDS_DANCE,  EFFECT_ATTACK_UP_2,          0, NORMAL,       STATUS,   100, 30,   0
@@ -55,7 +55,7 @@ Moves:
 	move TAIL_WHIP,     EFFECT_DEFENSE_DOWN,         0, NORMAL,       STATUS,   100, 30,   0
 	move POISON_STING,  EFFECT_POISON_HIT,          15, POISON,       PHYSICAL, 100, 35,  30
 	move X_SCISSOR,     EFFECT_NORMAL_HIT,          80, BUG,          PHYSICAL, 100, 15,   0
-	move PIN_MISSILE,   EFFECT_MULTI_HIT,           14, BUG,          PHYSICAL,  85, 20,   0
+	move BUG_BITE,      EFFECT_NORMAL_HIT,          60, BUG,          PHYSICAL, 100, 20,   0
 	move LEER,          EFFECT_DEFENSE_DOWN,         0, NORMAL,       STATUS,   100, 30,   0
 	move BITE,          EFFECT_FLINCH_HIT,          60, DARK,         PHYSICAL, 100, 25,  30
 	move GROWL,         EFFECT_ATTACK_DOWN,          0, NORMAL,       STATUS,   100, 40,   0
@@ -95,7 +95,7 @@ Moves:
 	move SLEEP_POWDER,  EFFECT_SLEEP,                0, GRASS,        STATUS,    75, 15,   0
 	move PETAL_DANCE,   EFFECT_RAMPAGE,             70, GRASS,        SPECIAL,  100, 20,   0
 	move STRING_SHOT,   EFFECT_SPEED_DOWN,           0, BUG,          STATUS,    95, 40,   0
-	move DRAGON_RAGE,   EFFECT_STATIC_DAMAGE,       40, DRAGON,       SPECIAL,  100, 10,   0
+	move DRAGON_PULSE,  EFFECT_NORMAL_HIT,          85, DRAGON,       SPECIAL,  100, 10,   0
 	move FIRE_SPIN,     EFFECT_TRAP_TARGET,         15, FIRE,         SPECIAL,   70, 15,   0
 	move THUNDERSHOCK,  EFFECT_PARALYZE_HIT,        40, ELECTRIC,     SPECIAL,  100, 30,  10
 	move THUNDERBOLT,   EFFECT_PARALYZE_HIT,        95, ELECTRIC,     SPECIAL,  100, 15,  10
