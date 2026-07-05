@@ -20,6 +20,7 @@
 * [0-9]*.dimensions
 * [0-9]*.animated.tilemap
 * [0-9]*.sgb.tilemap
+* [0-9]*.tilemap
 * [0-9]*.o
 gfx/pokemon/*/front.animated [0-9]*.tilemap
 gfx/pokemon/*/bitmask [0-9]*.asm
@@ -40,6 +41,15 @@ gfx/pokemon/*/frames.asm
 
 # tool binaries
 *.exe
+tools/gbcpal [0-9]*
+tools/gfx [0-9]*
+tools/lzcompress [0-9]*
+tools/make_patch [0-9]*
+tools/png_dimensions [0-9]*
+tools/pokemon_animation [0-9]*
+tools/pokemon_animation_graphics [0-9]*
+tools/scan_includes [0-9]*
+tools/stadium [0-9]*
 
 # precompiled python
 *.pyc
