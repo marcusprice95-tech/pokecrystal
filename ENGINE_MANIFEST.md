@@ -27,6 +27,7 @@
 - Existing Fairy-type move retcons: `SWEET_KISS`, `CHARM`, `MOONLIGHT`
 - Phase A Fairy move replacements: `BARRAGE` -> `DISARMING_VOICE`, `SHARPEN` -> `PLAY_ROUGH`, `KINESIS` -> `MOONBLAST`, `PSYWAVE` -> `DRAINING_KISS`
 - Phase A new move effects: None; all four moves reuse existing effects
+- Phase A known move behavior: `DRAINING_KISS` uses existing 50 percent drain behavior
 - Animation policy: Reuse existing animations unless a new move requires a documented custom animation.
 - New move effect policy: TBD
 

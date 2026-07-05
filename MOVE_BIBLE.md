@@ -167,8 +167,8 @@ Remaining Fairy move needs:
   reviewed.
 - Final level-up distribution after the custom Pokedex identifies which Pokemon
   are meant to use Fairy STAB.
-- Review whether `DRAINING_KISS` should keep Crystal's half-drain behavior or
-  receive a later custom 75 percent drain effect.
+- `DRAINING_KISS` currently uses Crystal's existing 50 percent drain behavior.
+  Review later whether it should receive a custom 75 percent drain effect.
 
 Do not add broad Fairy coverage until the custom Pokedex identifies which
 Pokemon are meant to use it.
