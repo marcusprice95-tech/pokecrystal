@@ -30,8 +30,8 @@ enough that every move has a reason to exist.
 - Hidden Power remains unchanged and must not become Fairy.
 - The move table still uses the vanilla move ID range and vanilla move data
   structure.
-- Reusable TMs, expanded move IDs, and larger move batches are not implemented
-  yet.
+- Reusable TMs, expanded move IDs, and additional move batches are not
+  implemented yet.
 
 ## Category Rules
 
@@ -263,7 +263,7 @@ are true:
 Do not replace a move merely because it is low power. Weak moves can be useful
 for early-game pacing, capture setup, progression, or flavor.
 
-## First Modern Moves To Consider Later
+## Future Moves To Consider Later
 
 This is a review queue, not an approval list. Each move still needs a separate
 implementation plan.
@@ -280,9 +280,9 @@ implementation plan.
   specific custom Pokemon need them. `POWER_GEM`, `X_SCISSOR`,
   `FLASH_CANNON`, and `AIR_SLASH` are already implemented.
 
-Prefer the smallest first batch that proves the move workflow: one Fairy attack,
-one physical Electric option if needed, one utility move if needed, and no more
-than a few replacement candidates.
+Future additions should remain small, targeted, and justified by the custom
+Pokedex, TM plan, or trainer design. Do not add another batch until the current
+move ecosystem has been manually tested in emulator.
 
 ## Large Batch Warning
 

@@ -34,6 +34,7 @@
 - Batch C polish move replacements: `DRAGON_RAGE` -> `DRAGON_PULSE`, `VICEGRIP` -> `DRAGON_CLAW`, `PIN_MISSILE` -> `BUG_BITE`
 - Batch C new move effects: None; all three moves reuse existing effects
 - Batch C known move behavior: `BUG_BITE` does not eat or consume berries
+- Retained legacy infrastructure: unused legacy move effects, AI scoring hooks, animation labels, animation objects, and SFX may remain for replaced moves when no active move references them; this is intentional risk containment
 - Animation policy: Reuse existing animations unless a new move requires a documented custom animation.
 - New move effect policy: TBD
 

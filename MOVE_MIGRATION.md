@@ -30,7 +30,7 @@ is obsolete, low-impact, or unsuitable for Crystal Modern's battle design.
 | --- | ---: | --- | --- | --- | --- | --- | --- |
 | `COMET_PUNCH` | `$04` | `SHADOW_CLAW` | Ghost | Physical | Low-power Normal multi-hit move with limited unique value. The slot adds a clear physical Ghost option while keeping `SHADOW_BALL` available. | Vanilla level-up and trainer references now use `MACH_PUNCH` or `MEGA_PUNCH` to avoid accidental Ghost coverage. | Implemented |
 | `SMOG` | `$7b` | `POISON_JAB` | Poison | Physical | Weak, inaccurate Poison move whose role is covered by `POISON_GAS`, `SLUDGE`, and `SMOKESCREEN`. The slot adds needed physical Poison STAB. | Vanilla level-up and trainer references now use `POISON_GAS`, `SMOKESCREEN`, `EMBER`, `ROAR`, or `SLUDGE` depending on species role. | Implemented |
-| `TWINEEDLE` | `$29` | `X_SCISSOR` | Bug | Physical | Beedrill-only legacy move with awkward low power. The slot adds a reliable physical Bug staple. | Vanilla Beedrill level-up and trainer references now use `PIN_MISSILE` to preserve Bug flavor without granting `X_SCISSOR` by accident. | Implemented |
+| `TWINEEDLE` | `$29` | `X_SCISSOR` | Bug | Physical | Beedrill-only legacy move with awkward low power. The slot adds a reliable physical Bug staple. | Vanilla Beedrill level-up and trainer references were first moved to `PIN_MISSILE`, then to `FURY_CUTTER` during Batch C when `PIN_MISSILE` became `BUG_BITE`. | Implemented |
 | `SPIKE_CANNON` | `$83` | `FLASH_CANNON` | Steel | Special | Redundant Normal multi-hit move with sparse distribution. The slot adds a simple special Steel attack. | Vanilla Cloyster/Corsola/Omastar references now use `AURORA_BEAM`, `BUBBLEBEAM`, or `ANCIENTPOWER`. | Implemented |
 | `CLAMP` | `$80` | `POWER_GEM` | Rock | Special | Inaccurate trapping move with narrow distribution and inherited trap text/AI hooks. The slot adds needed special Rock coverage. | Vanilla Shellder reference now uses `WHIRLPOOL`; Rain Dance AI and trap text references were removed so `POWER_GEM` does not inherit Clamp behavior. | Implemented |
 | `RAZOR_WIND` | `$0d` | `AIR_SLASH` | Flying | Special | Two-turn Normal attack with poor clarity and low practical value. The slot adds a special Flying attack with a simple flinch effect. | Vanilla egg move references now use `GROWTH`, `WING_ATTACK`, or `SLASH`; charge-turn/high-crit metadata was removed from the old slot. | Implemented |
@@ -57,5 +57,9 @@ is obsolete, low-impact, or unsuitable for Crystal Modern's battle design.
 - Batch C should not expand `NUM_ATTACKS`.
 - Batch C should not add new TMs.
 - `BUG_BITE` intentionally has no berry-eating effect for now.
+- Some legacy move effects, AI scoring hooks, animation labels, animation
+  objects, and SFX for replaced moves remain in the codebase when no active move
+  uses them. They are retained intentionally to avoid risky cleanup unrelated to
+  the move replacement milestone.
 - Old save files containing a replaced move ID will display and behave as the new
   move. This is expected for ID reuse and must be documented per milestone.
